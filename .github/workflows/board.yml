@@ -147,7 +147,7 @@ jobs:
             git config --global --add safe.directory /github/workspace/sources/apps
             cd sources/nuttx
             ./tools/configure.sh -l ${{ github.event.inputs.board-config }}
-            make V=1
+            make V=1 -j
             artifactconfigdir=$ARTIFACTDIR/$(echo ${{ github.event.inputs.board-config }} | sed "s/:/\//")/
             echo "artifactconfigdir: $artifactconfigdir"
             mkdir -p $artifactconfigdir
