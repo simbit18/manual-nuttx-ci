@@ -40,7 +40,7 @@ on:
         type: string
 
       jobs-arch:
-        description: Choose an architecture
+        description: Choose an architecture (Linux only)
         type: choice
         options:
           - arm
